@@ -1,24 +1,30 @@
 {
-  "name": "laravel-elixir-webpack-official",
+  "name": "coldbox-elixir-webpack-official",
   "version": "1.0.6",
-  "description": "Laravel Elixir Webpack integration",
+  "description": "ColdBox Elixir Webpack integration",
   "main": "dist/index.js",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/JeffreyWay/laravel-elixir-webpack-official.git"
+    "url" : "https://github.com/elpete/coldbox-elixir-webpack-official.git"
   },
-  "homepage": "https://github.com/JeffreyWay/laravel-elixir-webpack-official",
+  "homepage": "https://github.com/elpete/coldbox-elixir-webpack-official",
   "scripts": {
     "compile": "babel --presets=es2015 -d dist src",
     "prepublish": "npm run compile"
   },
   "keywords": [
-    "laravel",
+    "coldbox",
     "elixir",
     "webpack",
     "gulp"
   ],
   "author": "Jeffrey Way",
+  "contributors": [
+    {
+      "name": "Eric Peterson",
+      "email": "eric@elpete.com"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "buble": "^0.12.3",
