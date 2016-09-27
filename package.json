@@ -1,13 +1,13 @@
 {
-  "name": "coldbox-elixir-webpack-official",
-  "version": "1.0.6",
-  "description": "ColdBox Elixir Webpack integration",
+  "name": "coldbox-elixir-webpack",
+  "version": "1.0.0",
+  "description": "ColdBox Elixir Webpack Extension",
   "main": "dist/index.js",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/elpete/coldbox-elixir-webpack-official.git"
+    "url" : "https://github.com/coldbox-elixir/extension-webpack"
   },
-  "homepage": "https://github.com/elpete/coldbox-elixir-webpack-official",
+  "homepage": "https://github.com/coldbox-elixir/extension-webpack",
   "scripts": {
     "compile": "babel --presets=es2015 -d dist src",
     "prepublish": "npm run compile"
