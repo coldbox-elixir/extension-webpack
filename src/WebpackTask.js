@@ -49,14 +49,6 @@ class WebpackTask extends Elixir.Task {
 
 
     /**
-     * Register file watchers.
-     */
-    registerWatchers() {
-        this.watch(Elixir.config.get('assets.js.folder') + '/**/*.*');
-    }
-
-
-    /**
      * Run the files through Webpack.
      */
     webpack() {
