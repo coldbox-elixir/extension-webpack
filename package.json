@@ -1,6 +1,6 @@
 {
   "name": "coldbox-elixir-webpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ColdBox Elixir Webpack Extension",
   "main": "dist/index.js",
   "repository": {
