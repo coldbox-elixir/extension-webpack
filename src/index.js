@@ -16,8 +16,8 @@ Elixir.webpack = {
     config: {
         watch: Elixir.isWatching(),
         watchOptions: {
-            poll: true,
-            aggregateTimeout: 500
+            poll: false,
+            ignored: /node_modules/
         },
         devtool: Elixir.config.sourcemaps ? 'eval-cheap-module-source-map' : '',
         module: {
