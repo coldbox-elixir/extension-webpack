@@ -4,8 +4,8 @@
   "description": "ColdBox Elixir Webpack Extension",
   "main": "dist/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/coldbox-elixir/extension-webpack"
+    "type": "git",
+    "url": "https://github.com/coldbox-elixir/extension-webpack"
   },
   "homepage": "https://github.com/coldbox-elixir/extension-webpack",
   "scripts": {
@@ -30,7 +30,7 @@
     "buble": "^0.12.3",
     "buble-loader": "^0.2.2",
     "lodash": "^4.15.0",
-    "webpack": "2.1.0-beta.15 - 2.1.0-beta.22",
+    "webpack": "^2.2.1",
     "webpack-stream-fixed": "^3.2.2"
   },
   "devDependencies": {
