@@ -27,7 +27,7 @@ class WebpackTask extends Elixir.Task {
      * Lazy load the task dependencies.
      */
     loadDependencies() {
-        gulpWebpack = require('webpack-stream');
+        gulpWebpack = require('webpack-stream-fixed');
     }
 
 
