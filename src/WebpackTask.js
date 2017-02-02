@@ -55,7 +55,20 @@ class WebpackTask extends Elixir.Task {
         this.recordStep('Transforming ES2015 to ES5');
         this.recordStep('Writing Source Maps');
 
-        return gulpWebpack(this.mergeConfig(), require('webpack'));
+        return gulpWebpack(this.mergeConfig(), require('webpack'), ( err, stats ) => {
+            const errors = stats.toJson().errors;
+            if ( errors.length ) {
+                stats.toJson().errors.forEach( msg => {
+                    Elixir.log.error( msg );
+                } );
+            }
+            else {
+                this.recordStep( `Webpack compiled (${stats.endTime - stats.startTime} ms)` );
+                if ( Elixir.isWatching() ) {
+                    Elixir.log.task( this );
+                }
+            }
+        } );
     }
 
 
