@@ -21,14 +21,18 @@ Elixir.webpack = {
         },
         devtool: Elixir.config.sourcemaps ? 'eval-cheap-module-source-map' : '',
         module: {
-            loaders: [{ test: /\.jsx?$/, loader: 'buble', exclude: /node_modules/ }]
+            rules: [ {
+                test: /\.jsx?$/,
+                use: [ { loader: "buble-loader" } ],
+                exclude: [ /node_modules/ ]
+            } ]
         },
         stats: {
             assets: false,
             version: false
         },
         resolve: {
-            extensions: ['', '.js', '.jsx']
+            extensions: [ ".js", ".jsx" ]
         }
     },
 

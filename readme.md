@@ -1,6 +1,6 @@
 # ColdBox Elixir Webpack Integration
 
-This extension brings Webpack support to ColdBox Elixir, version 6 and up.
+This extension brings Webpack support to ColdBox Elixir, version 2 and up.
 
 ## Step 1: Install
 
