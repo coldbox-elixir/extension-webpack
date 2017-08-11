@@ -21,23 +21,34 @@ Elixir.webpack = {
         },
         devtool: Elixir.config.sourcemaps ? 'eval-cheap-module-source-map' : '',
         module: {
-            rules: [ {
-                test: /\.jsx?$/,
-                use: [ { loader: "buble-loader" } ],
-                exclude: [ /node_modules/ ]
-            } ]
-        },
-        stats: {
-            assets: false,
-            version: false
+            rules: [{
+                test: /\.js$/,
+                use: [{
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            [ "env", {
+                                "modules": false,
+                                "targets": {
+                                    "browsers": [ "> 2%" ],
+                                    "uglify": true
+                                }
+                            } ],
+                            "stage-2"
+                        ],
+                        plugins: [ "transform-runtime" ]
+                    }
+                }],
+                exclude: [/node_modules/],
+            }]
         },
         resolve: {
-            extensions: [ ".js", ".jsx" ]
+            extensions: [".js"]
         }
     },
 
-    mergeConfig(newConfig) {
-        return this.config = mergeWith(this.config, newConfig, (objValue, srcValue) => {
+    mergeConfig: function mergeConfig(newConfig) {
+        return this.config = mergeWith(this.config, newConfig, function (objValue, srcValue) {
             if (isArray(objValue)) {
                 return objValue.concat(srcValue);
             }
